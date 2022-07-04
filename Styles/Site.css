@@ -9,6 +9,7 @@ body
     padding: 0px;
     color: #696969; 
     z-index: 1;
+    border-radius: 8px;
     height: auto;
 }
 
