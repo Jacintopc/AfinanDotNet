@@ -1,0 +1,7 @@
+d:\1.data\documentos\visual studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\obj\Debug\ResolveAssemblyReference.cache
+d:\1.data\documentos\visual studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\bin\AfinanDotNet2.0.dll
+d:\1.data\documentos\visual studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\bin\AfinanDotNet2.0.pdb
+d:\1.data\documentos\visual studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\obj\Debug\AfinanDotNet2.0.dll
+d:\1.data\documentos\visual studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\obj\Debug\AfinanDotNet2.0.pdb
+d:\1.data\documentos\visual studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\bin\AfinanDotNet2.0.dll.CodeAnalysisLog.xml
+d:\1.data\documentos\visual studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\bin\AfinanDotNet2.0.dll.lastcodeanalysissucceeded

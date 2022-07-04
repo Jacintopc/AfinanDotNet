@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="AfinanDotNet2._0.Site1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head" runat="server">
+    <title>Cálculo Financiación Afinan</title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form" runat="server">
+    <div class="page">
+        <div class="header">
+           <div class="barratitulo">
+            <div class="logocompany">
+            <a href="../" >
+            <img id="LogoAfinan" alt="logo Afinan" src="~/Images/AfinanRent5.jpg" runat="server" style="margin: 5px; vertical-align: middle; " />
+            </a>
+            </div>    
+            <div  id="MenuPrincipal" class="ButtonsMenuMasterUSR" runat="server">
+                <div class="MenuButton"><a href="../Informame/Ayuda.htm" title="Instrucciones de uso y contacto"><img id="Img4" style="width:50px; height:50px;" src="~/Images/Ico4.jpg" runat="server" alt="Instrucciones de uso y contacto" /></a></div>
+                <div class="MenuButton"><a href="../Informame/Info.htm" title="Información comercial y artículos"><img id="Img3" style="width:50px; height:50px;" src="~/Images/Ico3.jpg" runat="server" alt="Información comercial y artículos" /></a></div>
+                <div class="MenuButton"><a href="../Informame/Renting.htm" title="Documentos para renting"><img id="Img2" src="~/Images/Ico2.jpg" style="width:50px; height:50px;" runat="server" alt="Documentos para renting" /></a></div>
+                <div class="MenuButton"><a href="../Informame/Matricula.htm" title="Documentos para matriculación"><img id="Img1" src="~/Images/Ico1.jpg" style="width:50px; height:50px;" runat="server" alt="Documentos para matriculación" /></a></div>
+            </div>
+            <div  id="MenuPrincipalAdm" class="ButtonsMenuMasterADM" runat="server">
+                <div class="MenuButton"><a href="../Admin/ListaNauticas.aspx" title="Lista Nauticas"><img id="Img5" src="~/Images/ButtonAfinan_2.png" style="width:50px; height:50px;" runat="server" alt="Lista Nauticas" /></a></div>
+                <div class="MenuButton"><a href="../Admin/Ajustes.aspx" title="Ajustes"><img id="Img6" src="~/Images/Button_Docum.png" runat="server" style="width:50px; height:50px;" alt="Ajustes" /></a></div>
+            </div>
+            <div id="LogonUserInfo" class="loginDisplay" runat="server">
+                <asp:LoginName id="LoginNameLabel" runat="server" FormatString ="Usuario: [{0}] " />&nbsp<asp:LoginStatus ID="LoginStatus1" runat="server" />
+            </div>
+        </div>
+        </div>
+        <div class="main">
+             <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div style="text-align:center; height:18px; vertical-align: middle; margin-left: 0px;" ><strong>AFINAN</strong>&nbsp; |&nbsp; 
+            Telf: 902 808 072&nbsp; | 
+            <a href="mailto:afinan@afinan.com">afinan@afinan.com</a> - V.<asp:Label id="versionnumber" runat="server"></asp:Label>
+        </div>
+    </div>
+    <div class="footer">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderFoot" runat="server"/> 
+    </div>
+    </form>
+</body>
+</html>
+

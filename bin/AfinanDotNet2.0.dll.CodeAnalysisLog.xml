@@ -1,0 +1,704 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 10.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="10.0">
+ <Targets>
+  <Target Name="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\bin\AfinanDotNet2.0.dll">
+   <Modules>
+    <Module Name="afinandotnet2.0.dll">
+     <Namespaces>
+      <Namespace Name="AfinanDotNet2._0">
+       <Types>
+        <Type Name="WebForm1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#abrebasedatos()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0" File="Default.aspx.cs" Line="25">In method 'WebForm1.abrebasedatos()', object 'myConnection' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'myConnection' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0" File="Default.aspx.cs" Line="26">In method 'WebForm1.abrebasedatos()', call System.IDisposable.Dispose on object 'myCommandNauticas' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0" File="Default.aspx.cs" Line="42">Object 'myConnection' can be disposed more than once in method 'WebForm1.abrebasedatos()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 42</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="AfinanDotNet2._0.Admin">
+       <Types>
+        <Type Name="Afinan_MembershipProvider" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ChangePassword(System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="260">In method 'Afinan_MembershipProvider.ChangePassword(string, string, string)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="261">In method 'Afinan_MembershipProvider.ChangePassword(string, string, string)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="281">'Afinan_MembershipProvider.ChangePassword(string, string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="261">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_MembershipProvider.ChangePassword(string, string, string)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ChangePasswordQuestionAndAnswer(System.String,System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="321">In method 'Afinan_MembershipProvider.ChangePasswordQuestionAndAnswer(string, string, string, string)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="322">In method 'Afinan_MembershipProvider.ChangePasswordQuestionAndAnswer(string, string, string, string)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="340">'Afinan_MembershipProvider.ChangePasswordQuestionAndAnswer(string, string, string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="322">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_MembershipProvider.ChangePasswordQuestionAndAnswer(string, string, string, string)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateUser(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Object,System.Web.Security.MembershipCreateStatus&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="419">In method 'Afinan_MembershipProvider.CreateUser(string, string, string, string, string, bool, object, out MembershipCreateStatus)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="424">In method 'Afinan_MembershipProvider.CreateUser(string, string, string, string, string, bool, object, out MembershipCreateStatus)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="424">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_MembershipProvider.CreateUser(string, string, string, string, string, bool, object, out MembershipCreateStatus)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DeleteUser(System.String,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="501">In method 'Afinan_MembershipProvider.DeleteUser(string, bool)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="502">In method 'Afinan_MembershipProvider.DeleteUser(string, bool)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="521">'Afinan_MembershipProvider.DeleteUser(string, bool)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="502">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_MembershipProvider.DeleteUser(string, bool)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EncodePassword(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1479">In method 'Afinan_MembershipProvider.EncodePassword(string)', call System.IDisposable.Dispose on object 'hash' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FindUsersByEmail(System.String,System.Int32,System.Int32,System.Int32&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1620">In method 'Afinan_MembershipProvider.FindUsersByEmail(string, int, int, out int)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1621">In method 'Afinan_MembershipProvider.FindUsersByEmail(string, int, int, out int)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1664">'Afinan_MembershipProvider.FindUsersByEmail(string, int, int, out int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1638">The query string passed to 'OleDbCommand.CommandText.set(string)' in 'Afinan_MembershipProvider.FindUsersByEmail(string, int, int, out int)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1621">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_MembershipProvider.FindUsersByEmail(string, int, int, out int)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FindUsersByName(System.String,System.Int32,System.Int32,System.Int32&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1548">In method 'Afinan_MembershipProvider.FindUsersByName(string, int, int, out int)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1549">In method 'Afinan_MembershipProvider.FindUsersByName(string, int, int, out int)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1591">'Afinan_MembershipProvider.FindUsersByName(string, int, int, out int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1565">The query string passed to 'OleDbCommand.CommandText.set(string)' in 'Afinan_MembershipProvider.FindUsersByName(string, int, int, out int)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1549">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_MembershipProvider.FindUsersByName(string, int, int, out int)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetAllUsers(System.Int32,System.Int32,System.Int32&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="553">In method 'Afinan_MembershipProvider.GetAllUsers(int, int, out int)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="554">In method 'Afinan_MembershipProvider.GetAllUsers(int, int, out int)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="596">'Afinan_MembershipProvider.GetAllUsers(int, int, out int)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="570">The query string passed to 'OleDbCommand.CommandText.set(string)' in 'Afinan_MembershipProvider.GetAllUsers(int, int, out int)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="554">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_MembershipProvider.GetAllUsers(int, int, out int)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetNumberOfUsersOnline()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="629">In method 'Afinan_MembershipProvider.GetNumberOfUsersOnline()', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="630">In method 'Afinan_MembershipProvider.GetNumberOfUsersOnline()', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="644">'Afinan_MembershipProvider.GetNumberOfUsersOnline()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="630">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_MembershipProvider.GetNumberOfUsersOnline()' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetPassword(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="683">In method 'Afinan_MembershipProvider.GetPassword(string, string)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="684">In method 'Afinan_MembershipProvider.GetPassword(string, string)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="715">'Afinan_MembershipProvider.GetPassword(string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="684">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_MembershipProvider.GetPassword(string, string)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetUser(System.Object,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="826">In method 'Afinan_MembershipProvider.GetUser(object, bool)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="827">In method 'Afinan_MembershipProvider.GetUser(object, bool)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="850">In method 'Afinan_MembershipProvider.GetUser(object, bool)', call System.IDisposable.Dispose on object 'updateCmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="862">'Afinan_MembershipProvider.GetUser(object, bool)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="827">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_MembershipProvider.GetUser(object, bool)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="850">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_MembershipProvider.GetUser(object, bool)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetUser(System.String,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="759">In method 'Afinan_MembershipProvider.GetUser(string, bool)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="760">In method 'Afinan_MembershipProvider.GetUser(string, bool)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="783">In method 'Afinan_MembershipProvider.GetUser(string, bool)', call System.IDisposable.Dispose on object 'updateCmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="796">'Afinan_MembershipProvider.GetUser(string, bool)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="760">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_MembershipProvider.GetUser(string, bool)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="783">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_MembershipProvider.GetUser(string, bool)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetUserNameByEmail(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="994">In method 'Afinan_MembershipProvider.GetUserNameByEmail(string)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="995">In method 'Afinan_MembershipProvider.GetUserNameByEmail(string)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1009">'Afinan_MembershipProvider.GetUserNameByEmail(string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="995">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_MembershipProvider.GetUserNameByEmail(string)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ResetPassword(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1070">In method 'Afinan_MembershipProvider.ResetPassword(string, string)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1071">In method 'Afinan_MembershipProvider.ResetPassword(string, string)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1108">In method 'Afinan_MembershipProvider.ResetPassword(string, string)', call System.IDisposable.Dispose on object 'updateCmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1119">'Afinan_MembershipProvider.ResetPassword(string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1071">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_MembershipProvider.ResetPassword(string, string)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1108">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_MembershipProvider.ResetPassword(string, string)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UnlockUser(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="946">In method 'Afinan_MembershipProvider.UnlockUser(string)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="947">In method 'Afinan_MembershipProvider.UnlockUser(string)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="963">'Afinan_MembershipProvider.UnlockUser(string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="947">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_MembershipProvider.UnlockUser(string)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdateFailureCount(System.String,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1293">In method 'Afinan_MembershipProvider.UpdateFailureCount(string, string)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1294">In method 'Afinan_MembershipProvider.UpdateFailureCount(string, string)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1424">Object 'reader' can be disposed more than once in method 'Afinan_MembershipProvider.UpdateFailureCount(string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1424</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1409">'Afinan_MembershipProvider.UpdateFailureCount(string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1341">The query string passed to 'OleDbCommand.CommandText.set(string)' in 'Afinan_MembershipProvider.UpdateFailureCount(string, string)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1347">The query string passed to 'OleDbCommand.CommandText.set(string)' in 'Afinan_MembershipProvider.UpdateFailureCount(string, string)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1369">The query string passed to 'OleDbCommand.CommandText.set(string)' in 'Afinan_MembershipProvider.UpdateFailureCount(string, string)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1389">The query string passed to 'OleDbCommand.CommandText.set(string)' in 'Afinan_MembershipProvider.UpdateFailureCount(string, string)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1394">The query string passed to 'OleDbCommand.CommandText.set(string)' in 'Afinan_MembershipProvider.UpdateFailureCount(string, string)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1294">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_MembershipProvider.UpdateFailureCount(string, string)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdateUser(System.Web.Security.MembershipUser)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1155">In method 'Afinan_MembershipProvider.UpdateUser(MembershipUser)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1156">In method 'Afinan_MembershipProvider.UpdateUser(MembershipUser)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1174">'Afinan_MembershipProvider.UpdateUser(MembershipUser)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1156">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_MembershipProvider.UpdateUser(MembershipUser)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ValidateUser(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1203">In method 'Afinan_MembershipProvider.ValidateUser(string, string)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1209">In method 'Afinan_MembershipProvider.ValidateUser(string, string)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1246">In method 'Afinan_MembershipProvider.ValidateUser(string, string)', call System.IDisposable.Dispose on object 'updateCmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1278">Object 'conn' can be disposed more than once in method 'Afinan_MembershipProvider.ValidateUser(string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1278</Issue>
+             <Issue Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1277">Object 'reader' can be disposed more than once in method 'Afinan_MembershipProvider.ValidateUser(string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 1277</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1262">'Afinan_MembershipProvider.ValidateUser(string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1209">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_MembershipProvider.ValidateUser(string, string)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1246">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_MembershipProvider.ValidateUser(string, string)' could contain the following variables 'this.tableName'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#WriteToEventLog(System.Exception,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_MembershipProvider.cs" Line="1699">In method 'Afinan_MembershipProvider.WriteToEventLog(Exception, string)', call System.IDisposable.Dispose on object 'log' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Afinan_RoleProvider" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AddUsersToRoles(System.String[],System.String[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="184">In method 'Afinan_RoleProvider.AddUsersToRoles(string[], string[])', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="185">In method 'Afinan_RoleProvider.AddUsersToRoles(string[], string[])', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="213">'Afinan_RoleProvider.AddUsersToRoles(string[], string[])' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="185">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_RoleProvider.AddUsersToRoles(string[], string[])' could contain the following variables 'this.usersInRolesTable'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateRole(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="254">In method 'Afinan_RoleProvider.CreateRole(string)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="255">In method 'Afinan_RoleProvider.CreateRole(string)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="268">'Afinan_RoleProvider.CreateRole(string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="255">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_RoleProvider.CreateRole(string)' could contain the following variables 'this.rolesTable'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DeleteRole(System.String,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="302">In method 'Afinan_RoleProvider.DeleteRole(string, bool)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="303">In method 'Afinan_RoleProvider.DeleteRole(string, bool)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="310">In method 'Afinan_RoleProvider.DeleteRole(string, bool)', call System.IDisposable.Dispose on object 'cmd2' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="330">'Afinan_RoleProvider.DeleteRole(string, bool)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="303">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_RoleProvider.DeleteRole(string, bool)' could contain the following variables 'this.rolesTable'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="310">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_RoleProvider.DeleteRole(string, bool)' could contain the following variables 'this.usersInRolesTable'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FindUsersInRole(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="703">In method 'Afinan_RoleProvider.FindUsersInRole(string, string)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="704">In method 'Afinan_RoleProvider.FindUsersInRole(string, string)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="724">'Afinan_RoleProvider.FindUsersInRole(string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="704">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_RoleProvider.FindUsersInRole(string, string)' could contain the following variables 'this.usersInRolesTable'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetAllRoles()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="367">In method 'Afinan_RoleProvider.GetAllRoles()', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="368">In method 'Afinan_RoleProvider.GetAllRoles()', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="386">'Afinan_RoleProvider.GetAllRoles()' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="368">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_RoleProvider.GetAllRoles()' could contain the following variables 'this.rolesTable'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetRolesForUser(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="422">In method 'Afinan_RoleProvider.GetRolesForUser(string)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="423">In method 'Afinan_RoleProvider.GetRolesForUser(string)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="442">'Afinan_RoleProvider.GetRolesForUser(string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="423">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_RoleProvider.GetRolesForUser(string)' could contain the following variables 'this.usersInRolesTable'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetUsersInRole(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="478">In method 'Afinan_RoleProvider.GetUsersInRole(string)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="479">In method 'Afinan_RoleProvider.GetUsersInRole(string)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="498">'Afinan_RoleProvider.GetUsersInRole(string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="479">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_RoleProvider.GetUsersInRole(string)' could contain the following variables 'this.usersInRolesTable'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IsUserInRole(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="534">In method 'Afinan_RoleProvider.IsUserInRole(string, string)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="535">In method 'Afinan_RoleProvider.IsUserInRole(string, string)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="553">'Afinan_RoleProvider.IsUserInRole(string, string)' rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="535">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_RoleProvider.IsUserInRole(string, string)' could contain the following variables 'this.usersInRolesTable'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RemoveUsersFromRoles(System.String[],System.String[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="599">In method 'Afinan_RoleProvider.RemoveUsersFromRoles(string[], string[])', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="600">In method 'Afinan_RoleProvider.RemoveUsersFromRoles(string[], string[])', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="600">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_RoleProvider.RemoveUsersFromRoles(string[], string[])' could contain the following variables 'this.usersInRolesTable'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RoleExists(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="660">In method 'Afinan_RoleProvider.RoleExists(string)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="661">In method 'Afinan_RoleProvider.RoleExists(string)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="661">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Afinan_RoleProvider.RoleExists(string)' could contain the following variables 'this.rolesTable'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#WriteToEventLog(System.Data.OleDb.OleDbException,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Afinan_RoleProvider.cs" Line="763">In method 'Afinan_RoleProvider.WriteToEventLog(OleDbException, string)', call System.IDisposable.Dispose on object 'log' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Ajustes" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GuardarConfiguracion(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Ajustes.aspx.cs" Line="184">In method 'Ajustes.GuardarConfiguracion(object, EventArgs)', call System.IDisposable.Dispose on object 'myCommand' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Ajustes.aspx.cs" Line="178">In method 'Ajustes.GuardarConfiguracion(object, EventArgs)', call System.IDisposable.Dispose on object 'myConnection' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Ajustes.aspx.cs" Line="272">Object 'myConnection' can be disposed more than once in method 'Ajustes.GuardarConfiguracion(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 272</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Lee_AjustesDB()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Ajustes.aspx.cs" Line="30">In method 'Ajustes.Lee_AjustesDB()', call System.IDisposable.Dispose on object 'da' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Ajustes.aspx.cs" Line="31">In method 'Ajustes.Lee_AjustesDB()', call System.IDisposable.Dispose on object 'ds' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Ajustes.aspx.cs" Line="24">In method 'Ajustes.Lee_AjustesDB()', call System.IDisposable.Dispose on object 'myConnection' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="Ajustes.aspx.cs" Line="114">Object 'myConnection' can be disposed more than once in method 'Ajustes.Lee_AjustesDB()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 114</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="EditaNautica" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ActualizaRole(System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="EditaNautica.aspx.cs" Line="107">In method 'EditaNautica.ActualizaRole(string, string, string)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="EditaNautica.aspx.cs" Line="106">In method 'EditaNautica.ActualizaRole(string, string, string)', call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="EditaNautica.aspx.cs" Line="107">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'EditaNautica.ActualizaRole(string, string, string)' could contain the following variables 'usuario', 'rol', 'oldusuario'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreaNautica(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="EditaNautica.aspx.cs" Line="184">In method 'EditaNautica.CreaNautica(object, EventArgs)', call System.IDisposable.Dispose on object 'ImpDB' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="EditaNautica.aspx.cs" Line="200">In method 'EditaNautica.CreaNautica(object, EventArgs)', call System.IDisposable.Dispose on object 'da' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="EditaNautica.aspx.cs" Line="201">In method 'EditaNautica.CreaNautica(object, EventArgs)', call System.IDisposable.Dispose on object 'ds' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="EditaNautica.aspx.cs" Line="212">Object 'myConnection' can be disposed more than once in method 'EditaNautica.CreaNautica(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 212</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetUserRole(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="EditaNautica.aspx.cs" Line="65">In method 'EditaNautica.GetUserRole(string)', call System.IDisposable.Dispose on object 'da' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="EditaNautica.aspx.cs" Line="66">In method 'EditaNautica.GetUserRole(string)', call System.IDisposable.Dispose on object 'ds' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="EditaNautica.aspx.cs" Line="78">Object 'myConnection' can be disposed more than once in method 'EditaNautica.GetUserRole(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 78</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="EditaNautica.aspx.cs" Line="65">The query string passed to 'OleDbDataAdapter.OleDbDataAdapter(string, OleDbConnection)' in 'EditaNautica.GetUserRole(string)' could contain the following variables 'username'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GuardarNautica(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="EditaNautica.aspx.cs" Line="236">In method 'EditaNautica.GuardarNautica(object, EventArgs)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="EditaNautica.aspx.cs" Line="237">In method 'EditaNautica.GuardarNautica(object, EventArgs)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LeeNautica(System.String)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="EditaNautica.aspx.cs" Line="138">In method 'EditaNautica.LeeNautica(string)', call System.IDisposable.Dispose on object 'da' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="EditaNautica.aspx.cs" Line="139">In method 'EditaNautica.LeeNautica(string)', call System.IDisposable.Dispose on object 'ds' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="EditaNautica.aspx.cs" Line="174">Object 'myConnection' can be disposed more than once in method 'EditaNautica.LeeNautica(string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 174</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="EditaNautica.aspx.cs" Line="138">The query string passed to 'OleDbDataAdapter.OleDbDataAdapter(string, OleDbConnection)' in 'EditaNautica.LeeNautica(string)' could contain the following variables 'ID_Nautica'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ImportDatabase" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CreateUserAfinan(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Object,System.String,System.String,System.String,System.String,System.String,System.String&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="ImportDatabase.aspx.cs" Line="108">In method 'ImportDatabase.CreateUserAfinan(string, string, string, string, string, bool, object, string, string, string, string, string, out string)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="ImportDatabase.aspx.cs" Line="109">In method 'ImportDatabase.CreateUserAfinan(string, string, string, string, string, bool, object, string, string, string, string, string, out string)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Importar_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="ImportDatabase.aspx.cs" Line="28">In method 'ImportDatabase.Importar_Click(object, EventArgs)', object 'conn' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'conn' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\Admin" File="ImportDatabase.aspx.cs" Line="29">In method 'ImportDatabase.Importar_Click(object, EventArgs)', call System.IDisposable.Dispose on object 'cmd' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="AfinanDotNet2._0.User">
+       <Types>
+        <Type Name="Presupuesto" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CalculaCuotas(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\User" File="Presupuestos.aspx.cs" Line="296">In method 'Presupuesto.CalculaCuotas(object, EventArgs)', call System.IDisposable.Dispose on object 'da' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\User" File="Presupuestos.aspx.cs" Line="297">In method 'Presupuesto.CalculaCuotas(object, EventArgs)', call System.IDisposable.Dispose on object 'ds' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\User" File="Presupuestos.aspx.cs" Line="290">In method 'Presupuesto.CalculaCuotas(object, EventArgs)', call System.IDisposable.Dispose on object 'myConnection' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\User" File="Presupuestos.aspx.cs" Line="672">Object 'myConnection' can be disposed more than once in method 'Presupuesto.CalculaCuotas(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 672</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Imprimir(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\User" File="Presupuestos.aspx.cs" Line="719">In method 'Presupuesto.Imprimir(object, EventArgs)', call System.IDisposable.Dispose on object 'myCommand' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\User" File="Presupuestos.aspx.cs" Line="712">In method 'Presupuesto.Imprimir(object, EventArgs)', call System.IDisposable.Dispose on object 'myConnection' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\User" File="Presupuestos.aspx.cs" Line="818">Object 'myConnection' can be disposed more than once in method 'Presupuesto.Imprimir(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 818</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LeeDatosNautica()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\User" File="Presupuestos.aspx.cs" Line="31">In method 'Presupuesto.LeeDatosNautica()', object 'myConnection' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'myConnection' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\User" File="Presupuestos.aspx.cs" Line="38">In method 'Presupuesto.LeeDatosNautica()', call System.IDisposable.Dispose on object 'da' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\User" File="Presupuestos.aspx.cs" Line="39">In method 'Presupuesto.LeeDatosNautica()', call System.IDisposable.Dispose on object 'ds' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\User" File="Presupuestos.aspx.cs" Line="32">In method 'Presupuesto.LeeDatosNautica()', call System.IDisposable.Dispose on object 'myCommandNauticas' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\User" File="Presupuestos.aspx.cs" Line="67">Object 'myConnection' can be disposed more than once in method 'Presupuesto.LeeDatosNautica()'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 67</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\User" File="Presupuestos.aspx.cs" Line="32">The query string passed to 'OleDbCommand.OleDbCommand(string, OleDbConnection)' in 'Presupuesto.LeeDatosNautica()' could contain the following variables 'this.User.Identity.Name'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\User" File="Presupuestos.aspx.cs" Line="38">The query string passed to 'OleDbDataAdapter.OleDbDataAdapter(string, OleDbConnection)' in 'Presupuesto.LeeDatosNautica()' could contain the following variables 'this.User.Identity.Name'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="propuesta" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Page_Load(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\User" File="propuesta.aspx.cs" Line="46">In method 'propuesta.Page_Load(object, EventArgs)', call System.IDisposable.Dispose on object 'da' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\User" File="propuesta.aspx.cs" Line="47">In method 'propuesta.Page_Load(object, EventArgs)', call System.IDisposable.Dispose on object 'ds' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\User" File="propuesta.aspx.cs" Line="40">In method 'propuesta.Page_Load(object, EventArgs)', call System.IDisposable.Dispose on object 'myConnection' before all references to it are out of scope.</Issue>
+            </Message>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\User" File="propuesta.aspx.cs" Line="213">Object 'myConnection' can be disposed more than once in method 'propuesta.Page_Load(object, EventArgs)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 213</Issue>
+            </Message>
+            <Message TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2010-07-16 16:55:53Z" FixCategory="DependsOnFix">
+             <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\User" File="propuesta.aspx.cs" Line="46">The query string passed to 'OleDbDataAdapter.OleDbDataAdapter(string, OleDbConnection)' in 'propuesta.Page_Load(object, EventArgs)' could contain the following variables 'this.Request.QueryString.Get("IDPresupuesto")'. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Dispose objects before losing scope</Name>
+   <Description>If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.</Description>
+   <Resolution Name="ExceptionEdge">In method {0}, object {1} is not disposed along all exception paths. Call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Resolution Name="NonExceptionEdge">In method {0}, call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>Do not dispose objects multiple times</Name>
+   <Description>A correctly implemented Dispose method can be called multiple times without throwing an exception. However, this is not guaranteed and to avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Description>
+   <Resolution Name="Default">Object {0} can be disposed more than once in method {1}. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 42</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="RethrowToPreserveStackDetails" Category="Microsoft.Usage" CheckId="CA2200">
+   <Name>Rethrow to preserve stack details</Name>
+   <Description>Use the IL rethrow instruction to preserve original stack details when re-raising a caught exception.</Description>
+   <Resolution Name="Default">{0} rethrows a caught exception and specifies it explicitly as an argument. Use 'throw' without an argument instead, in order to preserve the stack location where the exception was initially raised.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182363(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="Review SQL queries for security vulnerabilities" Category="Microsoft.Security" CheckId="CA2100">
+   <Name>Review SQL queries for security vulnerabilities</Name>
+   <Description>A SQL command string built from user input is vulnerable to SQL injection attacks. Microsoft SQL Server and other database servers support stored procedures and parameterized SQL queries, which reduce the risk of injection attacks.</Description>
+   <Resolution Name="WithNonLiterals">The query string passed to {0} in {1} could contain the following variables {2}. If any of these variables could come from user input, consider using a stored procedure or a parameterized SQL query instead of building the query with string concatenations.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182310(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

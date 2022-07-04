@@ -1,0 +1,10 @@
+d:\1.data\documentos\visual studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\obj\Release\ResolveAssemblyReference.cache
+D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\bin\AfinanDotNet2.0.dll
+D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\bin\AfinanDotNet2.0.pdb
+D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\obj\Release\AfinanDotNet2.0.dll
+D:\1.Data\Documentos\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\obj\Release\AfinanDotNet2.0.pdb
+D:\1.data\Documents\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\bin\AfinanDotNet2.0.dll
+D:\1.data\Documents\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\bin\AfinanDotNet2.0.pdb
+D:\1.data\Documents\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\obj\Release\ResolveAssemblyReference.cache
+D:\1.data\Documents\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\obj\Release\AfinanDotNet2.0.dll
+D:\1.data\Documents\Visual Studio 2010\Projects\AfinanDotNet2.0\AfinanDotNet2.0\obj\Release\AfinanDotNet2.0.pdb
